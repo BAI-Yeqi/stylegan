@@ -378,7 +378,8 @@ def open_url(url: str, cache_dir: str = None, num_attempts: int = 10, verbose: b
                             raise IOError("Google Drive quota exceeded")
 
                     match = re.search(r'filename="([^"]*)"', res.headers.get("Content-Disposition", ""))
-                    url_name = match[1] if match else url
+                    #url_name = match[1] if match else url
+                    url_name = url
                     url_data = res.content
                     if verbose:
                         print(" done")
