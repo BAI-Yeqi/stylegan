@@ -23,8 +23,10 @@ from .. import util
 
 from .tfutil import TfExpression, TfExpressionEx
 
-_import_handlers = []  # Custom import handlers for dealing with legacy data in pickle import.
-_import_module_src = dict()  # Source code for temporary modules created during pickle import.
+# Custom import handlers for dealing with legacy data in pickle import.
+_import_handlers = []
+# Source code for temporary modules created during pickle import.
+_import_module_src = dict()
 
 
 def import_handler(handler_func):
