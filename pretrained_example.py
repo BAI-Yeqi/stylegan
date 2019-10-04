@@ -30,8 +30,8 @@ def main():
         # Gs = Long-term average of the generator.
         # Yields higher-quality results than the instantaneous snapshot.
 
-    print(Gs)
-
+    print(Gs, Gs.name, Gs.vars)
+    
     # Print network details.
     Gs.print_layers()
 
